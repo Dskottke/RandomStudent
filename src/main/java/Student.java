@@ -1,9 +1,11 @@
-public class Student {
+public abstract class  Student {
 
 
     private int id ;
     private String name;
 
+
+    abstract public void learn();
     public Student(int id, String name) {
         this.id = id;
         this.name = name;

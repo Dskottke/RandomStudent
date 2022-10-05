@@ -5,8 +5,9 @@ public class ComputerScienceStudent extends Student{
 
 
 
+
     public ComputerScienceStudent(int id, String name,String programmingLanguage) {
-        super(id, name);
+        super(id,name);
        this.programmingLanguage = programmingLanguage;
     }
 
@@ -16,6 +17,11 @@ public class ComputerScienceStudent extends Student{
 
     public void setProgrammingLanguage(String programmingLanguage) {
         this.programmingLanguage = programmingLanguage;
+    }
+
+    @Override
+    public void learn() {
+        System.out.println("learn java");
     }
 
     @Override

@@ -11,7 +11,7 @@ class StudentDBTest {
     @Test
     public void getAllStudents() {
         //given
-        Student student = new Student(5, "peter");
+        ComputerScienceStudent student = new ComputerScienceStudent(5, "peter","java");
         HashMap<Integer, Student> students = new HashMap<>(Map.of(student.getId(),student));
         StudentDB studentdb = new StudentDB(students);
         //when
@@ -22,8 +22,8 @@ class StudentDBTest {
 
     @Test
    void studentToString() {
-        //given
-        Student student = new Student(5, "peter");
+        // given
+        Student student = new ComputerScienceStudent(5, "peter","");
         HashMap<Integer, Student> students = new HashMap<>(Map.of(student.getId(),student));
         StudentDB studentdb = new StudentDB(students);
         //when
@@ -39,7 +39,7 @@ class StudentDBTest {
     void findByIdReturnsObject() {
         //given
         int id = 5;
-        Student student = new Student(5, "peter");
+        Student student = new ComputerScienceStudent(5, "peter","java");
         HashMap<Integer, Student> students = new HashMap<>(Map.of(student.getId(),student));
         StudentDB studentdb = new StudentDB(students);
 

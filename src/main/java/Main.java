@@ -18,25 +18,25 @@ public class Main {
     */
 
         //New student
-        Student student1 = new Student(1 , "peter");
-        Student student2 = new Student(2 , "Hans");
-        Student student3 = new Student(3 , "Klaus");
-        Student student4 = new Student(4 , "Karl");
+        Student student1 = new ComputerScienceStudent(1 , "peter","java");
+        Student student2 = new ComputerScienceStudent(2 , "Hans","c++");
+        Student student3 = new ComputerScienceStudent(3 , "Klaus","Qbasic");
+        Student student4 = new ComputerScienceStudent(4 , "Karl","c#");
 
         //New ComputerScienStudent + Typecast
-        ComputerScienceStudent david = new ComputerScienceStudent(5,"david","java");
+       ComputerScienceStudent david = new ComputerScienceStudent(5,"david","java");
         Student davidTypecast= (Student) david;
         System.out.println(davidTypecast.getClass().toString());
 
         // fill map
-        HashMap<Integer, Student> students = new HashMap<>(Map.of(
+       HashMap<Integer, Student> students = new HashMap<>(Map.of(
                 student1.getId(), student1,
                 student2.getId(), student2,
                 student3.getId(), student3
         ));
 
 
-        // new StudentDB
+       // new StudentDB
         StudentDB studentdb = new StudentDB(students);
 
         //add Student4 and remove Student1
@@ -52,6 +52,15 @@ public class Main {
         catch (IdNotFoundException e){
             System.out.println(e.getMessage());
         }
+
+       /* Mache deine Student Klasse zu einer abstrakten Klasse.
+        Füge der Klasse Student eine abstracte Methode hinzu. Lasse diese von deiner ComputerScienceStudent Klasse implementieren.
+        */
+        ComputerScienceStudent student6 = new ComputerScienceStudent(5,"peter","Java");
+        student1.learn();
+
     }
+
+
 
 }
