@@ -17,11 +17,18 @@ public class Main {
     Schreibe einen Test mittels try/catch der dieses Verhalten überprüft.
     */
 
+        //New student
         Student student1 = new Student(1 , "peter");
         Student student2 = new Student(2 , "Hans");
         Student student3 = new Student(3 , "Klaus");
         Student student4 = new Student(4 , "Karl");
 
+        //New ComputerScienStudent + Typecast
+        ComputerScienceStudent david = new ComputerScienceStudent(5,"david","java");
+        Student davidTypecast= (Student) david;
+        System.out.println(davidTypecast.getClass().toString());
+
+        // fill map
         HashMap<Integer, Student> students = new HashMap<>(Map.of(
                 student1.getId(), student1,
                 student2.getId(), student2,
@@ -29,8 +36,10 @@ public class Main {
         ));
 
 
+        // new StudentDB
         StudentDB studentdb = new StudentDB(students);
 
+        //add Student4 and remove Student1
         System.out.println(studentdb);
         studentdb.addStudent(student4);
         System.out.println(studentdb);
