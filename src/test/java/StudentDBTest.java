@@ -29,7 +29,7 @@ class StudentDBTest {
         //when
         String actual = studentdb.toString();
         //then
-        String expected = "StudentDB{allStudents={5=Studenten{id=5, name='peter'}}}";
+        String expected = "StudentDB{allStudents={5=ComputerScienceStudent{programmingLanguage=''} Studenten{id=5, name='peter'}}}";
         assertEquals(expected, actual);
 
     }
