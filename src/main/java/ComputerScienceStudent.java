@@ -22,6 +22,6 @@ public class ComputerScienceStudent extends Student{
     public String toString() {
         return "ComputerScienceStudent{" +
                 "programmingLanguage='" + programmingLanguage + '\'' +
-                '}';
+                "} " + super.toString();
     }
 }
